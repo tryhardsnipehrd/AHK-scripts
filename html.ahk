@@ -11,8 +11,8 @@ In most cases, just type the starting tag, and it'll finish it,
 however, a few are exceptions
 
 Author --- Tryhrdsnphrd
-Updated --- 02/18/2021
-Script-Version --- 1.0.0
+Updated --- 02/19/2021
+Script-Version --- 1.1.0
 */
 
 :*:<div>::
@@ -359,3 +359,7 @@ Send, <embed src="">
 Send, {Left}{Left}
 return
 
+:*:<link css>::
+Send, <link type="text/css" rel="stylesheet" href="">
+Send, {Left}{Left}
+return
