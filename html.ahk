@@ -1,5 +1,20 @@
 #SingleInstance Force
 
+/*
+This is a pretty large script I made for working with HTML
+Although most IDEs have this functionality built-in,
+I usually work in Notepad++ so I don't have this.
+I tried to make everything make sense, but please feel
+free to change it as you see fit.
+
+In most cases, just type the starting tag, and it'll finish it,
+however, a few are exceptions
+
+Author --- Tryhrdsnphrd
+Updated --- 02/18/2021
+Script-Version --- 1.0.0
+*/
+
 :*:<div>::
 Send, <div></div>
 Send, {Left}{Left}{Left}{Left}{Left}{Left}
@@ -62,6 +77,8 @@ Send, {Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}
 Send, {Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}
 Send, {Left}{Left}{Left}{Left}{Left}{Left}{Left}
 return
+
+; All the headers are here, makes sense to group them together
 
 :*:<h1>::
 Send, <h1></h1>
@@ -150,6 +167,9 @@ Send, {Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}
 Send, {Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}
 return
 
+;This one is made to do a TON of typing, and should end it with the cursor at the bottom
+;Will be updated later
+
 :*:<table>::
 Send, <table>{Enter}<thead>{Enter}</thead>{Enter}<tbody>{Enter}<tr>{Enter}<td></td>{Enter}</tr>{Enter}<tr></tr>{Enter}</tbody>{Enter}</table>
 return
@@ -175,6 +195,22 @@ Send, {Left}{Left}{Left}{Left}{Left}{Left}{Left}{Enter}{Left}{Left}
 Send, {Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}
 Send, {Left}{Left}{Left}{Left}{Left}
 return
+
+
+/*
+This next area is a pain and a bit confusing.
+I use the different types of <input>, but with different styles,
+like text, numbers, slider, etc.
+The only ones I think are confusing are <input limit> and <limit letlimit>.
+These are used to set minimum and maximum limits to number and text
+fields respectively.
+All the others are just their type pretty much, with all needed
+fields with them.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*/
 
 :*:<input text>::
 Send, <input type="text" name="" id="">
@@ -221,6 +257,14 @@ Send, <input type=text minlength="5" maxlength="250" id="" name="">
 Send, {Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}
 return
 
+/*
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*/
+
+
 :*:<label>::
 Send, <label for=""></label>
 Send, {Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}
@@ -250,6 +294,12 @@ Send, {Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}
 Send, {Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}
 Send, {Left}{Left}
 return
+
+/*
+Regex may seem like a confusing term to use,
+but it made sense.
+I know it is only 3 characters, but it is a pain.
+*/
 
 :*:<regex>::
 Send, pattern=""
@@ -302,5 +352,10 @@ return
 :*:<audio>::
 Send, <audio><source type="audio/mp3" src=""></audio>
 Send, {Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}{Left}
+return
+
+:*:<embed>::
+Send, <embed src="">
+Send, {Left}{Left}
 return
 
